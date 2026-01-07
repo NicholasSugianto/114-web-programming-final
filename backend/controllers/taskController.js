@@ -102,22 +102,3 @@ exports.deleteTask = async (req, res) => {
     });
   }
 };
-
-// ==================== FILE 6: backend/routes/taskRoutes.js ====================
-const express = require('express');
-const router = express.Router();
-const {
-  createTask,
-  getAllTasks,
-  getTaskById,
-  updateTask,
-  deleteTask
-} = require('../controllers/taskController');
-
-router.post('/', createTask);           // Create
-router.get('/', getAllTasks);           // Read all
-router.get('/:id', getTaskById);        // Read single
-router.put('/:id', updateTask);         // Update
-router.delete('/:id', deleteTask);      // Delete
-
-module.exports = router;
